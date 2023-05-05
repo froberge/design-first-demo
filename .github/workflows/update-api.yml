@@ -30,6 +30,6 @@ jobs:
     - name: install 3scale toolbox
       uses: froberge/3scaletoolbox-action@v0.0.1
       with:
-        threeScale-token: ${{ secrets.threeScale-token }}
-        threeScale-url: ${{ secrets.threeScale-url }}
+        threeScale-token: ${{ secrets.THREESCALE_TOKEN }}
+        threeScale-domain: ${{ secrets.THREESCALE_DOMAIN }}
         api-file: $GITHUB_WORKSPACE/openAPI.json
