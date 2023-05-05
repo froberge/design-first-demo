@@ -28,7 +28,7 @@ jobs:
 
       # Runs a single command using the runners shell
     - name: install 3scale toolbox
-      uses: froberge/3scaletoolbox-action@v0.0.3
+      uses: froberge/3scaletoolbox-action@v0.0.1
       with:
         threeScale-token: ${{ secrets.threeScale-token }}
         threeScale-url: ${{ secrets.threeScale-url }}
