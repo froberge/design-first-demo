@@ -32,4 +32,4 @@ jobs:
       with:
         threeScale-token: ${{ secrets.threeScale-token }}
         threeScale-url: ${{ secrets.threeScale-url }}
-        api-file: $GITHUB_WORKSPACE/openAPI.json
+        api-file: $GITHUB_WORKSPACE/node-output/swagger.json
