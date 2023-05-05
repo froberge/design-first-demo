@@ -25,6 +25,9 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - name: Check out repository
       uses: actions/checkout@v3
+      with:
+        path: main
+
 
       # Runs a single command using the runners shell
     - name: install 3scale toolbox
@@ -32,4 +35,4 @@ jobs:
       with:
         threeScale-token: ${{ secrets.THREESCALE_TOKEN }}
         threeScale-domain: ${{ secrets.THREESCALE_DOMAIN }}
-        api-file: $GITHUB_WORKSPACE/openAPI.json
+        api-file: main/openAPI.json
