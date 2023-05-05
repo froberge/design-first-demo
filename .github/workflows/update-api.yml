@@ -28,7 +28,7 @@ jobs:
 
       # Runs a single command using the runners shell
     - name: install 3scale toolbox
-      uses: froberge/3scaletoolbox-action@v0.0.1
+      uses: froberge/3scaletoolbox-action@v0.0.2
       #run: echo Hello, world!
 
 #       # Runs a set of commands using the runners shell
