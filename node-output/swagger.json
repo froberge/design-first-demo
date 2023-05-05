@@ -25,7 +25,7 @@
       "get" : {
         "tags" : [ "Product Resource" ],
         "summary" : "Return all the products list",
-        "description" : "Return a list of all the products in the coffeeShop\n",
+        "description" : "Return a list of all the products in the coffeeShop.\n",
         "operationId" : "getProducts",
         "responses" : {
           "200" : {
