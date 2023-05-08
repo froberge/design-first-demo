@@ -44,7 +44,7 @@
       },
       "post" : {
         "tags" : [ "Product Resource" ],
-        "summary" : "adds a product in the product list",
+        "summary" : "adds a product in the product list catalogue",
         "description" : "Adds an new item to the product list",
         "operationId" : "addProduct",
         "requestBody" : {
