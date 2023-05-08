@@ -33,5 +33,5 @@ jobs:
         threeScale-domain: ${{ secrets.THREESCALE_DOMAIN }}
         api-file: main/openapi.json
         devkey-token: ${{ secrets.DEVKEY_TOKEN }}
-        basepath-private:  http://product-service.coffeeshop.svc:8080
-        basepath-public: /
+        basepath-private: ${{ vars.PRIVATE_BASE_URL }}
+        basepath-public: ${{ vars.PUBLIC_BASE_URL }}
