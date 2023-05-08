@@ -27,9 +27,11 @@ jobs:
 
       # Run the 3scale import task.
     - name: install 3scale toolbox
-      uses: froberge/3scaletoolbox-action@v0.0.2
+      uses: froberge/3scaletoolbox-action@v0.0.3
       with:
         threeScale-token: ${{ secrets.THREESCALE_TOKEN }}
         threeScale-domain: ${{ secrets.THREESCALE_DOMAIN }}
         api-file: main/openapi.json
         devkey-token: ${{ secrets.DEVKEY_TOKEN }}
+        basepath-private:  http://product-service.coffeeshop.svc:8080
+        basepath-public: /
