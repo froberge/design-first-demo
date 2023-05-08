@@ -13,8 +13,7 @@
     "version" : "1.0.0-SHAPSHOT"
   },
   "servers" : [ {
-    "url" : "https://virtserver.swaggerhub.com/froberge/product_service/1.0.0",
-    "description" : "SwaggerHub API Auto Mocking"
+    "url" : "/"
   } ],
   "tags" : [ {
     "name" : "Product Resource",
