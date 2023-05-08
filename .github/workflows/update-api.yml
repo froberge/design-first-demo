@@ -31,5 +31,5 @@ jobs:
       with:
         threeScale-token: ${{ secrets.THREESCALE_TOKEN }}
         threeScale-domain: ${{ secrets.THREESCALE_DOMAIN }}
-        api-file: main/openAPI.json
+        api-file: main/openapi.json
         devkey-token: ${{ secrets.DEVKEY_TOKEN }}
