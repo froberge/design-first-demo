@@ -14,3 +14,10 @@ The code is use to demontrate how we can use [SwaggerHub](https://swagger.io/too
     * THREESCALE_TOKEN
     
 ![workflow image](/doc/images/secretpage.png)
+
+1. Define the 2 variable needed
+    * PRIVATE_BASE_URL
+    * PUBLIC_BASE_URL 
+
+![workflow image2](/doc/images/variablespage.png)
+
