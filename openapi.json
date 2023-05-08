@@ -1,20 +1,17 @@
 {
   "openapi" : "3.0.0",
   "info" : {
-    "title" : "CoffeeShop API",
     "description" : "This is the API for the product Service",
+    "version" : "1.0.0-SHAPSHOT",
+    "title" : "CoffeeShop API",
     "contact" : {
       "email" : "froberge@redhat.com"
     },
     "license" : {
       "name" : "Apache 2.0",
       "url" : "http://www.apache.org/licenses/LICENSE-2.0.html"
-    },
-    "version" : "1.0.0-SHAPSHOT"
+    }
   },
-  "servers" : [ {
-    "url" : "/"
-  } ],
   "tags" : [ {
     "name" : "Product Resource",
     "description" : "All the product related Call"
@@ -24,8 +21,8 @@
       "get" : {
         "tags" : [ "Product Resource" ],
         "summary" : "Return all the products list",
-        "description" : "Return a list of all the products in the coffeeShop. Test 2.\n",
         "operationId" : "getProducts",
+        "description" : "Return a list of all the products in the coffeeShop. Test 2.\n",
         "responses" : {
           "200" : {
             "description" : "Products found",
@@ -45,18 +42,8 @@
       "post" : {
         "tags" : [ "Product Resource" ],
         "summary" : "adds a product in the product list",
-        "description" : "Adds an new item to the product list",
         "operationId" : "addProduct",
-        "requestBody" : {
-          "description" : "Product item to add",
-          "content" : {
-            "application/json" : {
-              "schema" : {
-                "$ref" : "#/components/schemas/Product"
-              }
-            }
-          }
-        },
+        "description" : "Adds an new item to the product list",
         "responses" : {
           "201" : {
             "description" : "item created"
@@ -67,6 +54,16 @@
           "409" : {
             "description" : "an existing item already exists"
           }
+        },
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/Product"
+              }
+            }
+          },
+          "description" : "Product item to add"
         }
       }
     },
@@ -74,17 +71,15 @@
       "get" : {
         "tags" : [ "Product Resource" ],
         "summary" : "Select a particular product",
-        "description" : "Return the product matching the proper id\n",
         "operationId" : "getProductById",
+        "description" : "Return the product matching the proper id\n",
         "parameters" : [ {
           "name" : "id",
           "in" : "path",
           "required" : true,
-          "style" : "simple",
-          "explode" : false,
           "schema" : {
-            "type" : "integer",
-            "format" : "int32"
+            "format" : "int32",
+            "type" : "integer"
           },
           "example" : 1
         } ],
@@ -94,7 +89,6 @@
             "content" : {
               "application/json" : {
                 "schema" : {
-                  "type" : "array",
                   "items" : {
                     "$ref" : "#/components/schemas/Product"
                   }
@@ -112,8 +106,8 @@
       "get" : {
         "tags" : [ "Product Resource" ],
         "summary" : "Return the number of product in the list of product",
-        "description" : "Return the number of different product offer at the coffeeshop\n",
         "operationId" : "getProductsCount",
+        "description" : "Return the number of different product offer at the coffeeshop\n",
         "responses" : {
           "200" : {
             "description" : "OK",
@@ -133,14 +127,12 @@
       "get" : {
         "tags" : [ "Product Resource" ],
         "summary" : "Return the products for a given size",
-        "description" : "Return all products for a certain size\n",
         "operationId" : "getProductsBySize",
+        "description" : "Return all products for a certain size\n",
         "parameters" : [ {
           "name" : "size",
           "in" : "path",
           "required" : true,
-          "style" : "simple",
-          "explode" : false,
           "schema" : {
             "type" : "string"
           },
@@ -167,8 +159,8 @@
       "get" : {
         "tags" : [ "Product Resource" ],
         "summary" : "Check if the service is up and ready to receive request",
-        "description" : "Check if the service is up and ready to receive request\n",
         "operationId" : "health",
+        "description" : "Check if the service is up and ready to receive request\n",
         "responses" : {
           "200" : {
             "description" : "OK",
@@ -187,8 +179,8 @@
   "components" : {
     "schemas" : {
       "LocalDate" : {
-        "type" : "string",
         "format" : "date",
+        "type" : "string",
         "example" : "2022-03-10"
       },
       "Product" : {
@@ -212,7 +204,7 @@
           },
           "price" : {
             "type" : "string",
-            "example" : "3.5"
+            "example" : 3.5
           },
           "create_date" : {
             "$ref" : "#/components/schemas/LocalDate"
