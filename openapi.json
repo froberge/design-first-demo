@@ -22,7 +22,7 @@
         "tags" : [ "Product Resource" ],
         "summary" : "Return all the products list",
         "operationId" : "getProducts",
-        "description" : "Return a list of all the products in the coffeeShop. Test 2.\n",
+        "description" : "Return a list of all the products in the coffeeShop. Test 3.\n",
         "responses" : {
           "200" : {
             "description" : "Products found",
